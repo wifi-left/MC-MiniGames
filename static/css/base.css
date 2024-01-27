@@ -304,6 +304,7 @@ a {
 body {
     color: var(--main-text-color);
     overflow: auto;
+    background-color: var(--main-bg-color);
 }
 
 .app-root {
