@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1,maximum-scale=1">
+    <title>Minecraft MiniGames - 由 wifi_left 制作的综合小游戏地图</title>
+    <script src="./static/js/checkie.js"></script>
+    <script src="./static/js/gquery.min.js"></script>
+    <script src="./static/js/default_settings.js"></script>
+    <link href="./static/css/element_style.css" rel="stylesheet" />
+    <link href="./static/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="./static/css/base.css" rel="stylesheet" />
+    <style>
+    </style>
+
+</head>
+
+<body>
+    <div class="app-root">
+        <div class="promptBlock"><span id="prompt-content"></span></div>
+        <!-- Small screen -->
+
+        <!-- Big screen -->
+        <div class="phone-bottom-bar">
+            <button onclick="changeWindow('home',true,this);" id="btn-home-bottom" class="bottom-btn">
+                <span class="fa fa-search"></span>
+                <span class="bottom-btn-title">介绍</span>
+            </button>
+            <!-- <button onclick="changeWindow('app',true,this);" id="btn-app-bottom" class="bottom-btn">
+                <span class="fa fa-cloud-download"></span>
+                <span class="bottom-btn-title">App</span>
+            </button> -->
+            <button onclick="changeWindow('download',true,this);" id="btn-download-bottom" class="bottom-btn">
+                <span class="fa fa-user-circle"></span>
+                <span class="bottom-btn-title">下载</span>
+            </button>
+            <button onclick="changeWindow('donate',true,this);" id="btn-donate-bottom" class="bottom-btn">
+                <span class="fa fa-gears"></span>
+                <span class="bottom-btn-title">关于</span>
+            </button>
+        </div>
+        <div class="root-left-part">
+            <div id="left-sel-display-bar"></div>
+            <div class="mainpage-btn">
+                <span class="mainpage-title">MiniGames</span>
+            </div>
+
+            <button onclick="changeWindow('home',true,this);" id="btn-home" class="left-btn">
+                <span class="fa fa-search"></span>
+                <span class="left-btn-title">介绍</span>
+            </button>
+            <button onclick="changeWindow('download',true,this);" id="btn-download" class="left-btn">
+                <span class="fa fa-user-circle"></span>
+                <span class="left-btn-title">下载</span>
+            </button>
+            <button onclick="changeWindow('donate',true,this);" id="btn-donate" class="left-btn">
+                <span class="fa fa-gears"></span>
+                <span class="left-btn-title">关于</span>
+            </button>
+            <!-- <button onclick="changeWindow('app',true,this);" id="btn-app" class="left-btn">
+                <span class="fa fa-cloud-download"></span>
+                <span class="left-btn-title">App</span>
+            </button> -->
+            <div class="left-btn-bottom">
+
+                <span class="version-show" id="version-show">加载版本号中...</span>
+            </div>
+
+        </div>
+
+
+
+        <div class="app-content">
+
+            <div id="win-home" class="app-content-window">
+                <h1 class="fa fa-address-card win-fronter">MiniGames 地图</h1><br />
+                <div class="content-root">
+                    <h2 style="color:rgb(250, 107, 107);font-weight: bold;">我们不支持Paper服务端！</h2>
+                    如果使用Paper出现问题，作者不会进行处理。<br />请使用 Fabric端、原版端代替（Spigot 兼容性未知）<br />
+                    <div class="hr"></div>
+                    <h2>地图兼容的MC版本</h2>
+                    这是一张Java版地图。最新版本的地图会在地图文件夹内“mcversion.txt”写明MC版本，也会在GitHub的releases前标明。<br />若出现版本不兼容情况，请检查是否为支持的版本，如果是，请向作者反馈！
+                    <h2>官方Q群</h2>
+                    <span>958572618</span>
+                    <h2>更新日志</h2>
+                    <details class="details">
+                        <summary class="details-summary">点击此处显示/隐藏</summary>
+                        <div id="commits">
+                            正在从 GitHub 加载中...
+                        </div>
+                    </details>
+                    <h2>下载地图</h2>
+                    <a href="#download" onclick="changeWindow('download',true);">点击此处前往下载页面</a>
+                    <h2>常见问题：</h2>
+                    <ul class="number-list">
+                        <li>Spigot 加有些插件会有神奇的问题，请酌情选择插件。已知：ESS 系列插件与地图不兼容。</li>
+                        建议使用 Fabric 、Forge或原版端。
+                        <li>服务端要启用命令方块，否则会出问题。</li>
+                        <li>出生点保护设置为0，否则普通玩家无法使用告示牌。</li>
+                        <li>若想基岩版游玩，请尝试使用GeyserMC。请尽量使用 Java 版本进行游玩！<br />
+                            GeyserMC 目前仍存在一些影响体验的BUG：<br />
+                            例如：无法正确显示计分板、数据标签解析错误、数据标签CanPlaceOn CanDestroy等无法将方块解析正确。</li>
+                        <li>出现 BUG，请先运行命令(OP) ：<code>/function selfcheck/check</code></li>
+                    </ul>
+                    <h2>其他</h2>
+                    如果您觉得有趣，请支持作者哦！~<br />
+                    如有意愿一起完成这张地图了话请联系我~<br />
+                    如发现 BUG，请及时留言。或有小游戏建议，请加入QQ群反馈：958572618
+                    感谢各位的支持~
+                    <h2>MCBBS 链接</h2>
+                    <a target="_blank"
+                        href="https://www.mcbbs.net/forum.php?mod=viewthread&tid=1231324">https://www.mcbbs.net/forum.php?mod=viewthread&tid=1231324</a>
+                    <h2>版权声明</h2>
+                    对于一般使用、修改等，只需要标注原作者即可。<br />
+                    如果您要商用，您需要向作者本人（联系方式：<a target="_blank"
+                        href="https://space.bilibili.com/521673619">bilibili</a>）寻求许可。（可能需要支付一定的回报，毕竟制作地图不易，而且还是免费地图，你拿来商用给作者点赞助不过分吧？）
+                    <h2>视频介绍</h2>
+                    <span>Dropper 星跳水立方通关教程（1.19.2）：</span><a target="_blank"
+                        href="https://www.bilibili.com/video/BV1JG4y1Z7pt">https://www.bilibili.com/video/BV1JG4y1Z7pt</a><br />
+                    <span>狼人杀（1.20.2）：</span><a target="_blank"
+                        href="https://www.bilibili.com/video/BV1Pc411k7yZ">https://www.bilibili.com/video/BV1Pc411k7yZ</a><br />
+                    <span>Battle Box（1.20.2）：</span><a target="_blank"
+                        href="https://www.bilibili.com/video/BV1RN4y1Y7AB">https://www.bilibili.com/video/BV1RN4y1Y7AB</a><br />
+                    <span>Zombie Days（PVE）（1.20.1）：</span><a target="_blank"
+                        href="https://www.bilibili.com/video/BV1BF411o7GB">https://www.bilibili.com/video/BV1BF411o7GB</a><br />
+                    <span>TNTWars（1.19.2）：</span><a target="_blank"
+                        href="https://www.bilibili.com/video/BV1yT41127uX">https://www.bilibili.com/video/BV1yT41127uX</a><br />
+                    <span>过时的老版本介绍（1.17）：</span><a target="_blank"
+                        href="https://www.bilibili.com/video/BV1TM4y1L7La">https://www.bilibili.com/video/BV1TM4y1L7La</a><br />
+                    <h2>推荐服务端</h2>
+                    Fabric + Fabric API + 地毯端 + 优化三件套<br />
+                    经检测，4GB内存大小服务器tps稳定20tps（已测试6人可以流畅游玩）（普通电脑原版多人联机也不会很卡）<br />
+                    建议关闭自动保存：<code>/save-off</code><br />
+                    已知在保存的时候会突然变卡。<br />
+                    <h2>使用方法</h2>
+                    将地图放入存档文件夹。<br />
+                    本地图使用原版指令进行制作。按照一般的地图安装方法安装即可。
+                    <h2>部分游戏介绍</h2>
+                    <ul class="number-list">
+                        <li>小游戏
+                            <ul class="romaji-list">
+                                <li>狼人杀<br />全新更新！支持3~24人。可以自定义角色、模式！</li>
+                                <li>Parkour Race<br />跑酷竞赛，坑爹跑酷。</li>
+                                <li>Repeling War<br />击退大战，是第一个做的。<br />玩法很简单就是PVP。</li>
+                                <li>Live Longest<br />活的最久。<br />Killer需要在Time Limit内杀死Runner。<br />
+                                    其中，<b>[Normal Mode]</b> 的Killer不会换。<br />
+                                    <b>[Guess Killer]</b> 中Killer将在有人死后转换。<br />
+                                    注：此模式后来经修改暂未发现BUG，若发现BUG请及时汇报。
+                                </li>
+                                <li>Snow<br />雪崩大战，模式有：<br />TNTRUN - TNTRUN 玩法。<br />Dig to the end - 一掘到底<br />
+                                    还有个两者一同的版本。</li>
+                                <li>Bedwars<br />起床战争 Bedwars 。如果不知道怎么玩可以搜一下。模仿Hypixel起床战争制作。</li>
+                                <li>密室杀手<br />已放弃更新，请尽量别玩。</li>
+                                <li>烫手的山芋<br />在规定时间内击打对手让他获得 “烫手的山芋（Hot Potato）”，他将在时间到后死亡。</li>
+                                <li>色盲派对<br />全新更新！根据物品栏中的方块颜色踩到对应方块上。</li>
+                                <li>决斗游戏：战桥<br />跑到对方的得分点中，先得到 5 分获胜。</li>
+                                <li>TNTWARS<br />使用爆炸工具将对方队伍玩家炸下虚空！<br />已关闭PVP。</li>
+                            </ul>
+                        </li>
+                        <li>
+                            休闲游戏 、PVE 游戏
+                            <ul class="romaji-list">
+                                <li>Zombie Days<br />类似于僵尸末日的玩法，但有主线。</li>
+                                <li>Normal Parkour<br />有记录点的普通跑酷（只做了一点点）。如果您愿意，我们接受跑酷地图投稿！暂且仅支持个人原创地图或者授权地图。</li>
+                                <li>棋类游戏<br />五子棋、井字棋、黑白棋……</li>
+                                <li>桌游类游戏<br />骰子游戏……</li>
+                            </ul>
+                        </li>
+                        <li>更多游戏请在游戏中查看！</li>
+                    </ul>
+                    <h2>部分游戏截图</h2>
+
+                    <div id="image-gallery">
+                        <button class="button" onclick="displayImage(this)">点击此处显示图片</button>
+                        <img data-src="./static/img/1.png" class="image-viewer" />
+                        <img data-src="./static/img/2.png" class="image-viewer" />
+                        <img data-src="./static/img/3.png" class="image-viewer" />
+                        <img data-src="./static/img/4.png" class="image-viewer" />
+                        <img data-src="./static/img/5.png" class="image-viewer" />
+                        <img data-src="./static/img/6.png" class="image-viewer" />
+                        <img data-src="./static/img/7.png" class="image-viewer" />
+                        <img data-src="./static/img/8.png" class="image-viewer" />
+                        <img data-src="./static/img/9.png" class="image-viewer" />
+                        <img data-src="./static/img/10.png" class="image-viewer" />
+                        <img data-src="./static/img/11.png" class="image-viewer" />
+                        <img data-src="./static/img/12.png" class="image-viewer" />
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="win-download" class="app-content-window">
+                <h1 class="fa fa-cloud-download win-fronter">下载地图</h1><br />
+                <h2>地图本体</h2>
+                <h3>从 GitLab 下载（推荐）</h3>
+                下载地址：<a target="_blank"
+                    href="https://gitlab.com/wifi-left/Map-MiniGames/-/archive/master/Map-MiniGames-master.zip">
+                    https://gitlab.com/wifi-left/Map-MiniGames/-/archive/master/Map-MiniGames-master.zip
+                </a>
+                <h3>从 GitHub 下载（主仓库）</h3>
+                下载地址：<a target="_blank" href="https://github.com/wifi-left/Map-MiniGames/releases/latest">
+                    https://github.com/wifi-left/Map-MiniGames/releases/latest
+                </a>
+                <h2>地图附加</h2>
+                <h3>可选：禁言模组</h3>
+                本模组用来控制玩家禁言，<b>不安装地图也可以正常使用。</b><br />
+                下载地址：<a target="_blank"
+                    href="https://modrinth.com/mod/speech-manager-by-command-scoreboard">Modrinth链接</a>
+                <h3>资源包</h3>
+                从GitLab下载：<a target="_blank"
+                    href="https://gitlab.com/wifi-left/Map-MiniGames/-/raw/master/resourcepack/MiniGameRes.zip">
+                    https://gitlab.com/wifi-left/Map-MiniGames/-/raw/master/resourcepack/MiniGameRes.zip
+                </a><br />
+                从GitHub下载：<a target="_blank"
+                    href="https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip">
+                    https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip
+                </a>
+
+
+            </div>
+            <div id="win-donate" class="app-content-window">
+                <h1 class="fa fa-address-card win-fronter">关于</h1><br />
+                <h2>版权声明</h2>
+                对于一般使用、修改等，只需要标注原作者即可。<br />
+                如果您要商用，您需要向作者本人（联系方式：<a
+                    href="https://space.bilibili.com/521673619">bilibili</a>）寻求许可。（可能需要支付一定的回报，毕竟制作地图不易，而且还是免费地图，你拿来商用给作者点赞助不过分吧？）
+                <h2>建造团队</h2>
+                <h3>主要作者</h3>
+                <b>@wifi_left (wifi_right、Bamboo丶Gamom)</b><br />
+                B站主页：<a target="_blank"
+                    href="https://space.bilibili.com/521673619">https://space.bilibili.com/521673619</a><br />
+                GitHub主页：<a target="_blank" href="https://github.com/wifi-left">https://github.com/wifi-left</a><br />
+
+                <h3>其他作者</h3>
+                <span>特别鸣谢：<b>@Domnick_JYH</b> 提供的建筑</span><br />
+                <span>特别鸣谢：<b>@lawyer112</b> 提供的服务器支持</span><br />
+                <span>其余的均在地图中标明！</span><br />
+
+                <div class="hr"></div>
+                <h2>网页信息</h2>
+                <b>网页：</b><span>Bamboo丶Gamom</span><br />
+                <b>引用模块：</b><b>gQuery.js</b><span>、</span><b>font-awesome</b><br />
+                <b>网页版本：</b><span class="version-show">加载版本号中...</span><br />
+                <span class="final-ele">仅提供技术支持</span>
+            </div>
+        </div>
+    </div>
+    <!-- <button type="button" id="btn">按钮</button>
+  <input type="text" name="" id="demo" value="" />
+  <div id="res">接收到的服务器端消息显示区域</div>
+  <script src="/public/event.js"></script> -->
+    <script src="./static/js/app_ui.js"></script>
+    <script src="./static/js/app.js"></script>
+</body>
+
+</html>
