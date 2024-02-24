@@ -1517,43 +1517,9 @@ a:hover {
     font-weight: bold;
 }
 
-@media only screen and (min-width: 1400px) {
-    #video-player-suggest {
-        width: calc(100% - 916px);
-    }
-}
-
-@media only screen and (max-width: 1120px) {
-    #video-player-main {
-        width: calc(100%);
-        top: 112px;
-    }
-
-    #video-player-info-head {
-        width: calc(100% - 56px);
-        top: 0;
-    }
-
-    #video-player-suggest {
-        /* position: relative; */
-        top: 112px;
-        height: auto;
-        margin-top: 56.25%;
-        left: 0;
-        width: calc(100% - 8px);
-    }
-
-    #video-player-suggest-list {
-        height: auto;
-        margin: 0 0 0 0;
-        top: 0;
-        position: relative;
-    }
-}
-
 @media only screen and (max-width: 948px) {
     .app-content-window {
-        height: calc(100% - 68px);
+        height: calc(100% - 12px);
     }
 
     .root-left-part {
