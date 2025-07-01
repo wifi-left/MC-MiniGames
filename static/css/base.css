@@ -17,6 +17,12 @@
         transform: rotate(360deg);
     }
 }
+blockquote{
+    border-left: 4px solid #b6b6b6;
+    text-indent: 20px;
+    margin-left: 20px;
+    color:#b6b6b6;
+}
 
 .playing-list-father {
     width: calc(100% - 8px);

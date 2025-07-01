@@ -80,10 +80,150 @@
                     <h2 style="color:rgb(250, 107, 107);font-weight: bold;">我们不支持Paper服务端！</h2>
                     如果使用Paper出现问题，作者不会进行处理。<br />请使用 Fabric端、原版端代替（Spigot 兼容性未知）<br />
                     <div class="hr"></div>
+
                     <h2>地图兼容的MC版本</h2>
                     这是一张Java版地图。最新版本的地图会在地图文件夹内“mcversion.txt”写明MC版本，也会在GitHub的releases前标明。<br />若出现版本不兼容情况，请检查是否为支持的版本，如果是，请向作者反馈！
                     <h2>官方Q群</h2>
                     <span>958572618</span>
+                    <h1 id='wifi-lefts-minigames'>wifi-left&#39;s MiniGames</h1>
+                    <p>如果您想要使用此地图，请遵守：</p>
+                    <ol start=''>
+                        <li>请不要删除任何原作者信息</li>
+                        <li>如果进行修改请添加明显提示</li>
+                        <li>不可商用</li>
+
+                    </ol>
+                    <blockquote>
+                        <p>本地图许可证 <a href='LISENCE.html'>LISENCE (CC BY-NC-SA 4.0)</a></p>
+                    </blockquote>
+                    <h1 id='重要提示'>重要提示</h1>
+                    <h2 id='前言'>前言</h2>
+                    <p>由于地图是由比较纯净的<strong>Fabric
+                            客户端</strong>制作，理论上<strong>原版</strong>、<strong>Fabric</strong>、<strong>Spigot</strong>均能正常工作
+                    </p>
+                    <h2 id='不支持的服务端'>不支持的服务端</h2>
+                    <p><strong>但是</strong>，以下服务端很可能出现问题，所以我们<strong>不支持</strong>以下服务端：</p>
+                    <ol start=''>
+                        <li>Paper：由于Paper各种“优化”导致原版功能被砍许多，而地图用了这些特性（无意中使用，而且很多都不算是BUG）。如果您想在Paper上使用这张地图，您可以看看本地图的第三方分支项目：<a
+                                href='https://github.com/FallenCrystal/Minecraft-Minigames-Map'>Minecraft-Minigames-Map
+                                by
+                                FallenCrystal</a>。这位作者尝试进行了对Spigot等插件端的支持。<strong>但请注意</strong>，这些第三方分支并不一定是最新的地图的修改版。
+                        </li>
+                        <li>Folia：破坏了原版命令系统</li>
+                        <li>任何破坏原版命令、修改原版行为的服务端：本地图基于原版命令系统以及原版行为。</li>
+                        <li>Forge：可能会出现各种BUG，原因未知。请尝试使用Neoforged代替Forge。</li>
+
+                    </ol>
+                    <h2 id='模组兼容性'>模组兼容性</h2>
+                    <p>如果您使用模组端，请一定阅读以下内容。</p>
+                    <h3 id='不支持的模组'>不支持的模组</h3>
+                    <p>暂未发现，欢迎补充。</p>
+                    <h2 id='插件兼容性'>插件兼容性</h2>
+                    <p>如果您使用插件端，请一定阅读以下内容。</p>
+                    <h3 id='不兼容的插件包括代理端velocitybungeecord中的插件）'>不兼容的插件（包括代理端（Velocity、bungeecord中的插件）</h3>
+                    <blockquote>
+                        <p>感谢 <a href='https://github.com/FallenCrystal/Minecraft-Minigames-Map/'>FallenCrystal</a></p>
+                    </blockquote>
+                    <ul>
+                        <li>EssentialsX, CMI</li>
+                        <li>CombatLogX</li>
+                        <li>任何修改计分板的插件, 除了TAB。关于TAB插件，请<strong>一定阅读</strong><a
+                                href='https://github.com/FallenCrystal/Minecraft-Minigames-Map/blob/1-21-4-lts/docs/tab-compatibility.md'>Tab
+                                插件兼容性</a></li>
+                        <li>Multiverse-Core, BKCommonLib</li>
+                        <li>任何隐身插件 (如SuperVanish)</li>
+
+                    </ul>
+                    <h3 id='建议安装的插件'>建议安装的插件:</h3>
+                    <ul>
+                        <li>LuckPerms : 如果您正在运行中大型服务器, 这是必不可缺的. 除了您的插件需要获取权限以外, 禁用原版OP权限也可以避免您的管理员拥有您不希望他们拥有的权限,
+                            一定程度上也可以避免无下限的滥用.</li>
+                        <li>AntiPopup : 在您的服务器上禁用烦人的聊天报告, 并阻止&quot;不安全的聊天&quot;弹窗弹出.</li>
+
+                    </ul>
+                    <h2 id='某些服务端的特殊设置'>某些服务端的特殊设置</h2>
+                    <ol start=''>
+                        <li>如果您使用Spigot，建议您打开在线模式。Spigot离线模式会导致部分玩家无法进入（Spigot会把玩家队伍前缀当成玩家名，而这些前缀包含了特殊符号“|”等不应该出现在路径中的文本）
+                        </li>
+                        <li>如果您使用插件端，请<strong>不要</strong>使用<strong>任何破坏原版命令、修改原版行为</strong>的插件</li>
+                        <li>如果您使用模组端（如Fabric、Forge），请<strong>不要</strong>使用<strong>任何破坏原版命令、修改原版行为</strong>以及<strong>让Clone、Fill等异步进行</strong>的模组（地图重置需要这些命令处于非异步状态进行）
+                        </li>
+
+                    </ol>
+                    <h2 id='建议的服务端以及模组等'>建议的服务端以及模组等</h2>
+                    <h3 id='服务端'>服务端</h3>
+                    <p>建议您使用和地图开发环境相同的 <a href='https://fabricmc.net/use/server/'>Fabric 服务端</a></p>
+                    <h3 id='模组'>模组</h3>
+                    <ol start=''>
+                        <li><a href='https://modrinth.com/mod/fabric-api'>Fabric API</a>：基础库（可选）</li>
+                        <li><a href='https://modrinth.com/mod/carpet'>Carpet</a>：提供TPS、MSPT显示以及部分优化（可选）</li>
+                        <li><a href='https://modrinth.com/mod/speech-manager-by-command-scoreboard'>Speech Manager by
+                                Command &#39;scoreboard&#39;</a>：提供本地图的小游戏禁言、分区聊天功能（可选）</li>
+
+                    </ol>
+                    <h1 id='快速开始强制进入游戏管理员）'>快速开始、强制进入游戏（管理员）</h1>
+                    <p>详见 <a href='QUICKPLAY.md'>QUICKPLAY.md</a></p>
+                    <h1 id='反馈bug'>反馈BUG</h1>
+                    <p>请在 GitHub Issue 或者qq群里反馈</p>
+                    <h1 id='关于对于部分插件的支持'>关于对于部分插件的支持</h1>
+                    <p>我尝试支持了 <code>ViaVersion</code> 以及 <code>Geyser</code> 模组。</p>
+                    <p>但请不要对其抱有太大期待。很可能大部分游戏无法正常游玩。</p>
+                    <h1 id='资源包的使用'>资源包的使用</h1>
+                    <p>您可以在服务器配置资源包的 GitHub / Gitea 直链达到自动下载资源包。</p>
+                    <p>Gitea 下载速度更快。</p>
+                    <p>Gitea 的 URL 为：<a
+                            href='https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip'>https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip</a>
+                    </p>
+                    <p>GitHub 的 URL 为：<a
+                            href='https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip'>https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip</a>
+                    </p>
+                    <h1 id='服务端安装教程'>服务端安装教程</h1>
+                    <ol start=''>
+                        <li><a
+                                href='https://zh.minecraft.wiki/w/%E6%95%99%E7%A8%8B#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE'>教程
+                                - 服务器建设 - Minecraft Wiki</a></li>
+
+                    </ol>
+                    <p>请参考上述教程。</p>
+                    <h1 id='感谢列表'>感谢列表</h1>
+                    <p>排名不分先后</p>
+                    <ul>
+                        <li>
+                            <p>感谢 Domnick_JYH 提供的大量帮助</p>
+                        </li>
+                        <li>
+                            <p>感谢 00ɹɐəlϽ 提供的战利品表设计</p>
+                        </li>
+                        <li>
+                            <p>感谢 616789 提供的大量帮助</p>
+                        </li>
+                        <li>
+                            <p>感谢 lawyer112 提供的服务器支持</p>
+                        </li>
+                        <li>
+                            <p>感谢 LateTea 提供的支持</p>
+                        </li>
+                        <li>
+                            <p>感谢 Wemsur 进行的测试、反馈</p>
+                        </li>
+                        <li>
+                            <p>感谢 残月sama 提供的支持</p>
+                        </li>
+                        <li>
+                            <p>感谢 群友、地图使用者 的支持</p>
+                        </li>
+                        <li>
+                            <p>感谢 Akita丶 有偿提供的建筑</p>
+                            <blockquote>
+                                <p>如果您有需要建筑地图的可以与他（Akita丶）联系。</p>
+                                <p>MineBBS链接地址：<a
+                                        href='https://www.minebbs.com/threads/1-12-1-20-4-rpg-pvp.30597/'>https://www.minebbs.com/threads/1-12-1-20-4-rpg-pvp.30597/</a>
+                                </p>
+                                <p>不保证该第三方作者的质量，如果出现问题请双方自行解决。</p>
+                            </blockquote>
+                        </li>
+
+                    </ul>
                     <h2>更新日志</h2>
                     <details class="details">
                         <summary class="details-summary">点击此处显示/隐藏</summary>
@@ -195,7 +335,8 @@
                 <h1 class="fa fa-cloud-download win-fronter">下载地图</h1><br />
                 <h2>地图本体</h2>
                 <h3>从 Gitea 下载（推荐）</h3>
-                下载地址：<a target="_blank" href="https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip">https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip</a>
+                下载地址：<a target="_blank"
+                    href="https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip">https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip</a>
                 <h3>从 GitHub 下载（主仓库）</h3>
                 下载地址：<a target="_blank" href="https://github.com/wifi-left/Map-MiniGames/releases/latest">
                     https://github.com/wifi-left/Map-MiniGames/releases/latest
