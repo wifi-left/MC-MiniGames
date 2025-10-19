@@ -33,7 +33,7 @@
                 <span class="bottom-btn-title">App</span>
             </button> -->
             <button onclick="changeWindow('download',true,this);" id="btn-download-bottom" class="bottom-btn">
-                <span class="fa fa-user-circle"></span>
+                <span class="fa fa-cloud-download"></span>
                 <span class="bottom-btn-title">下载</span>
             </button>
             <button onclick="changeWindow('donate',true,this);" id="btn-donate-bottom" class="bottom-btn">
@@ -52,7 +52,7 @@
                 <span class="left-btn-title">介绍</span>
             </button>
             <button onclick="changeWindow('download',true,this);" id="btn-download" class="left-btn">
-                <span class="fa fa-user-circle"></span>
+                <span class="fa fa-cloud-download"></span>
                 <span class="left-btn-title">下载</span>
             </button>
             <button onclick="changeWindow('donate',true,this);" id="btn-donate" class="left-btn">
@@ -76,7 +76,22 @@
 
             <div id="win-home" class="app-content-window">
                 <h1 class="fa fa-address-card win-fronter">MiniGames 地图</h1><br />
+
                 <div class="content-root">
+                    <h2>地图最新信息</h2>
+                    <h3>版本信息</h3>
+                    <img
+                        src="https://img.shields.io/github/v/release/wifi-left/Map-MiniGames?display_name=release&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC" />
+                    <p>最新地图版本：<a href="#download" onclick="changeWindow('download')"><b
+                                class="map-version-text">获取中...</b></a></p>
+                    <h3>更新日志</h3>
+                    <details class="details">
+                        <summary class="details-summary">点击此处显示/隐藏</summary>
+                        <div id="commits">
+                            正在从 GitHub 加载中...
+                        </div>
+                    </details>
+
                     <h2 style="color:rgb(250, 107, 107);font-weight: bold;">我们不支持Paper服务端！</h2>
                     如果使用Paper出现问题，作者不会进行处理。<br />请使用 Fabric端、原版端代替（Spigot 兼容性未知）<br />
                     <div class="hr"></div>
@@ -122,7 +137,8 @@
                     <p>如果您使用插件端，请一定阅读以下内容。</p>
                     <h3 id='不兼容的插件'>不兼容的插件（包括代理端（Velocity、bungeecord中的插件））</h3>
                     <blockquote>
-                        <p>感谢 <a href='https://github.com/FallenCrystal/Minecraft-Minigames-Map/'>FallenCrystal</a></p>
+                        <p>感谢 <a href='https://github.com/FallenCrystal/Minecraft-Minigames-Map/'>FallenCrystal</a>
+                        </p>
                     </blockquote>
                     <ul>
                         <li>EssentialsX, CMI</li>
@@ -157,18 +173,22 @@
                     <ol start=''>
                         <li><a href='https://modrinth.com/mod/fabric-api'>Fabric API</a>：基础库（可选）</li>
                         <li><a href='https://modrinth.com/mod/carpet'>Carpet</a>：提供TPS、MSPT显示以及部分优化（可选）</li>
-                        <li><a href='https://modrinth.com/mod/speech-manager-by-command-scoreboard'>Speech Manager by
+                        <li><a href='https://modrinth.com/mod/speech-manager-by-command-scoreboard'>Speech Manager
+                                by
                                 Command &#39;scoreboard&#39;</a>：提供本地图的小游戏禁言、分区聊天功能（可选）</li>
 
                     </ol>
-                    <h1 id='快速开始强制进入游戏管理员）'>快速开始、强制进入游戏（管理员）</h1>
-                    <p>详见 <a href='QUICKPLAY.md'>QUICKPLAY.md</a></p>
-                    <h1 id='反馈bug'>反馈BUG</h1>
+                    <h2>下载地图</h2>
+                    <button style="font-size:24px;height:60px;line-height:60px;" class="button-green"
+                        onclick="changeWindow('download',true);"><span class="fa fa-cloud-download"></span><span
+                            style="margin-left: 16px;">点击此处前往下载页面</span></button>
+
+                    <h2 id='快速开始强制进入游戏管理员）'>快速开始、强制进入游戏（管理员）</h2>
+                    <p>详见 <a href='https://github.com/wifi-left/Map-MiniGames/blob/master/QUICKPLAY.md'>QUICKPLAY.md</a>
+                    </p>
+                    <h2 id='反馈bug'>反馈BUG</h2>
                     <p>请在 GitHub Issue 或者qq群里反馈</p>
-                    <h1 id='关于对于部分插件的支持'>关于对于部分插件的支持</h1>
-                    <p>我尝试支持了 <code>ViaVersion</code> 以及 <code>Geyser</code> 模组。</p>
-                    <p>但请不要对其抱有太大期待。很可能大部分游戏无法正常游玩。</p>
-                    <h1 id='资源包的使用'>资源包的使用</h1>
+                    <h2 id='资源包的使用'>资源包的使用</h2>
                     <p>您可以在服务器配置资源包的 GitHub / Gitea 直链达到自动下载资源包。</p>
                     <p>Gitea 下载速度更快。</p>
                     <p>Gitea 的 URL 为：<a
@@ -177,7 +197,7 @@
                     <p>GitHub 的 URL 为：<a
                             href='https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip'>https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip</a>
                     </p>
-                    <h1 id='服务端安装教程'>服务端安装教程</h1>
+                    <h2 id='服务端安装教程'>服务端安装教程</h2>
                     <ol start=''>
                         <li><a
                                 href='https://zh.minecraft.wiki/w/%E6%95%99%E7%A8%8B#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE'>教程
@@ -185,7 +205,7 @@
 
                     </ol>
                     <p>请参考上述教程。</p>
-                    <h1 id='感谢列表'>感谢列表</h1>
+                    <h2 id='感谢列表'>感谢列表</h2>
                     <p>排名不分先后</p>
                     <ul>
                         <li>
@@ -224,15 +244,7 @@
                         </li>
 
                     </ul>
-                    <h2>更新日志</h2>
-                    <details class="details">
-                        <summary class="details-summary">点击此处显示/隐藏</summary>
-                        <div id="commits">
-                            正在从 GitHub 加载中...
-                        </div>
-                    </details>
-                    <h2>下载地图</h2>
-                    <a href="#download" onclick="changeWindow('download',true);">点击此处前往下载页面</a>
+
                     <h2>常见问题：</h2>
                     <ul class="number-list">
                         <li>Spigot 加有些插件会有神奇的问题，请酌情选择插件。已知：ESS 系列插件与地图不兼容。</li>
@@ -249,13 +261,9 @@
                     如有意愿一起完成这张地图了话请联系我~<br />
                     如发现 BUG，请及时留言。或有小游戏建议，请加入QQ群反馈：958572618
                     感谢各位的支持~
-                    <h2>MCBBS 链接</h2>
+                    <h2>MineBBS 链接</h2>
                     <a target="_blank"
-                        href="https://www.mcbbs.net/forum.php?mod=viewthread&tid=1231324">https://www.mcbbs.net/forum.php?mod=viewthread&tid=1231324</a>
-                    <h2>版权声明</h2>
-                    对于一般使用、修改等，只需要标注原作者即可。<br />
-                    如果您要商用，您需要向作者本人（联系方式：<a target="_blank"
-                        href="https://space.bilibili.com/521673619">bilibili</a>）寻求许可。（可能需要支付一定的回报，毕竟制作地图不易，而且还是免费地图，你拿来商用给作者点赞助不过分吧？）
+                        href="https://www.minebbs.com/resources/minigames.7814/">https://www.minebbs.com/resources/minigames.7814/</a>
                     <h2>视频介绍</h2>
                     <span>Dropper 星跳水立方通关教程（1.19.2）：</span><a target="_blank"
                         href="https://www.bilibili.com/video/BV1JG4y1Z7pt">https://www.bilibili.com/video/BV1JG4y1Z7pt</a><br />
@@ -333,30 +341,58 @@
             </div>
             <div id="win-download" class="app-content-window">
                 <h1 class="fa fa-cloud-download win-fronter">下载地图</h1><br />
-                <h2>地图本体</h2>
-                <h3>从 Gitea 下载（推荐）</h3>
-                下载地址：<a target="_blank"
-                    href="https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip">https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip</a>
-                <h3>从 GitHub 下载（主仓库）</h3>
-                下载地址：<a target="_blank" href="https://github.com/wifi-left/Map-MiniGames/releases/latest">
-                    https://github.com/wifi-left/Map-MiniGames/releases/latest
-                </a>
-                <h2>地图附加</h2>
-                <h3>可选：禁言模组</h3>
-                本模组用来控制玩家禁言，<b>不安装地图也可以正常使用。</b><br />
-                下载地址：<a target="_blank"
-                    href="https://modrinth.com/mod/speech-manager-by-command-scoreboard">Modrinth链接</a>
-                <h3>资源包</h3>
-                从Gitea下载：<a target="_blank"
-                    href="https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip">
-                    https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip
-                </a><br />
-                从GitHub下载：<a target="_blank"
-                    href="https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip">
-                    https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip
-                </a>
+                <h2>下载前请阅读</h2>
+                <p>本地图介绍&常见问题 <a href='#home' onclick="changeWindow('home');">MiniGames 地图介绍&常见问题</a></p>
+                <p>本地图许可证 <a href='LISENCE.html'>LISENCE (CC BY-NC-SA 4.0)</a></p>
+                <div id="download-display-button">
+                    <input type="checkbox" id="download-display-checkbox"
+                        onclick="document.getElementById('download-hidden').style.display = 'inline-block';document.getElementById('download-display-checkbox').disabled = 'true';"
+                        class="checkbox" /><label for="download-display-checkbox" class="checkbox">我已阅读相关内容，获取下载地址。</label>
+                </div>
 
+                <div id="download-hidden" style="display:none;height:auto;width:100%;">
+                    <div class="hr"></div>
+                    <h2>版本信息</h2>
+                    <img
+                        src="https://img.shields.io/github/v/release/wifi-left/Map-MiniGames?display_name=release&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC" />
+                    <p>最新地图版本：<b class="map-version-text">获取中...</b></p>
+                    <p>本地图许可证 <a href='LISENCE.html'>LISENCE (CC BY-NC-SA 4.0)</a></p>
+                    <div class="hr"></div>
+                    <h2>地图本体</h2>
 
+                    <h3>从 GitHub 下载（推荐）</h3>
+                    <h4>从 GitHub 的镜像下载（第三方）（速度较快）</h4>
+                    镜像地址：<a target="_blank"
+                        href="https://gh.monlor.com/https://github.com/wifi-left/Map-MiniGames/archive/refs/heads/master.zip">
+                        https://gh.monlor.com/https://github.com/wifi-left/Map-MiniGames/archive/refs/heads/master.zip
+                    </a>
+                    <h4>从 GitHub Releases 下载（含历史版本）</h4>
+                    GitHub Releases 地址：<a target="_blank"
+                        href="https://github.com/wifi-left/Map-MiniGames/releases/latest">
+                        https://github.com/wifi-left/Map-MiniGames/releases/latest
+                    </a>
+                    <h3>从 Gitea 仓库下载（备用）</h3>
+                    Gitea 仓库地址：<a target="_blank"
+                        href="https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip">https://gitea.com/wifi-left/Map-MiniGames/archive/master.zip</a>
+                    <div class="hr"></div>
+                    <h2>地图附加</h2>
+                    <h3>可选：禁言模组（建议）</h3>
+                    本模组用来控制玩家禁言，<b>不安装地图也可以正常使用，但无法自动禁言玩家。</b><br />
+                    下载地址：<a target="_blank"
+                        href="https://modrinth.com/mod/speech-manager-by-command-scoreboard">Modrinth链接</a>
+                    <div class="hr"></div>
+                    <h3>资源包（下载的地图目录 <span class="em">resourcepack/MiniGameRes.zip</span> 中已经包含）</h3>
+                    从Gitea下载：<a target="_blank"
+                        href="https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip">
+                        https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip
+                    </a><br />
+                    从GitHub下载：<a target="_blank"
+                        href="https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip">
+                        https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip
+                    </a>
+                </div>
+
+                <p style="height:40px;display: inline-block;width:100%;"></p>
             </div>
             <div id="win-donate" class="app-content-window">
                 <h1 class="fa fa-address-card win-fronter">关于</h1><br />

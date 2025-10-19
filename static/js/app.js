@@ -19,7 +19,7 @@ function loadCommitsFromGitHub() {
                 let msg = dat['commit']['message'];
                 let time = dat['commit']['committer']['date'];
                 msgObj.innerText = msg;
-                timeObj.innerText = "Update Time: "+time;
+                timeObj.innerText = "Update Time: " + time;
                 msgObj.classList.add("commit-messages");
                 timeObj.classList.add("commit-time");
                 newObj.appendChild(msgObj);
@@ -30,15 +30,31 @@ function loadCommitsFromGitHub() {
     }).catch(e => {
         commitRootObj.innerHTML = "获取失败。<br/>" + e.message;
     })
+    $.fetch("https://api.github.com/repos/wifi-left/Map-MiniGames/releases/latest", "json").then(data => {
+        var elements = document.querySelectorAll(".map-version-text");
+        for (let i = 0; i < elements.length; i++) {
+            let ele = elements[i];
+            let version_name = data.name;
+            if (version_name == null) {
+                throw new WebTransportError("Empty data.");
+            }
+            ele.innerText = version_name;
+        }
+    }).catch(e => {
+        var elements = document.querySelectorAll(".map-version-text");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].innerHTML = "获取失败：" + e.message;
+        }
+    })
 }
 loadCommitsFromGitHub();
 
-function displayImage(btn){
+function displayImage(btn) {
     btn.remove();
     let eles = document.querySelectorAll(".image-viewer");
-    for(let i = 0;i<eles.length;i++){
+    for (let i = 0; i < eles.length; i++) {
         let url = eles[i].getAttribute("data-src");
-        eles[i].setAttribute("src",url);
+        eles[i].setAttribute("src", url);
         eles[i].style.display = "inline-block";
     }
 }
