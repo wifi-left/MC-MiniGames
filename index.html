@@ -348,14 +348,18 @@
                 </p>
                 <div class="hr"></div>
                 <h2>下载前请阅读</h2>
-                <p>本地图介绍&常见问题 <a href='#home' onclick="changeWindow('home');">MiniGames 地图介绍&常见问题</a></p>
-                <p>本地图许可证 <a target="_blank" href='LISENCE.html'>LISENCE (CC BY-NC-SA 4.0)</a></p>
-                <div id="download-display-button">
+                <p>本地图介绍&常见问题： <a href='#home' onclick="changeWindow('home');">MiniGames 地图介绍&常见问题</a></p>
+                <p>本地图许可证： <a target="_blank" href='LISENCE.html'>LISENCE (CC BY-NC-SA 4.0)</a></p>
+
+                <span>勾选：</span>
+                <div style="display:inline-block;" id="download-display-button">
                     <input type="checkbox" id="download-display-checkbox"
                         onclick="document.getElementById('download-hidden').style.display = 'inline-block';document.getElementById('download-display-checkbox').disabled = 'true';"
                         class="checkbox" /><label for="download-display-checkbox"
                         class="checkbox">我已阅读相关内容，获取下载地址。</label>
                 </div>
+                </p>
+
 
                 <div id="download-hidden" style="display:none;height:auto;width:100%;">
 
